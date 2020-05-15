@@ -17,7 +17,6 @@
 		0ADFD6DC1E37FE9500848732 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADFD6DB1E37FE9500848732 /* Constants.swift */; };
 		0AFC11BC1E36A1B800D76586 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC11BB1E36A1B800D76586 /* Card.swift */; };
 		0AFC11BE1E36B78D00D76586 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC11BD1E36B78D00D76586 /* MemoryGame.swift */; };
-		364C10EA0F07FE13262A7124 /* Pods_Memory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A4155DE131602E4404A8AC /* Pods_Memory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,20 +43,11 @@
 		0ADFD6F11E3A679200848732 /* MemoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFC11BB1E36A1B800D76586 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		0AFC11BD1E36B78D00D76586 /* MemoryGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
-		10A4155DE131602E4404A8AC /* Pods_Memory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C659CB8F1716FE7B3D4415 /* Pods-Memory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Memory/Pods-Memory.debug.xcconfig"; sourceTree = "<group>"; };
 		C49B13ADC330C75B6F15364F /* Pods-Memory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memory.release.xcconfig"; path = "Pods/Target Support Files/Pods-Memory/Pods-Memory.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0AA329AF1E33DD7800E03511 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				364C10EA0F07FE13262A7124 /* Pods_Memory.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0ADFD6EE1E3A679200848732 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,7 +61,6 @@
 		083057C93C543B935CEC62DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				10A4155DE131602E4404A8AC /* Pods_Memory.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,11 +142,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AA329C41E33DD7900E03511 /* Build configuration list for PBXNativeTarget "Memory" */;
 			buildPhases = (
-				7764A476B2EF223BEA4613F6 /* [CP] Check Pods Manifest.lock */,
 				0AA329AE1E33DD7800E03511 /* Sources */,
-				0AA329AF1E33DD7800E03511 /* Frameworks */,
 				0AA329B01E33DD7800E03511 /* Resources */,
-				2265E60ABA06AEA561BC83AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,45 +233,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2265E60ABA06AEA561BC83AC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Memory/Pods-Memory-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Memory/Pods-Memory-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7764A476B2EF223BEA4613F6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Memory-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0AA329AE1E33DD7800E03511 /* Sources */ = {
@@ -453,7 +400,6 @@
 		};
 		0AA329C51E33DD7900E03511 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66C659CB8F1716FE7B3D4415 /* Pods-Memory.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -461,6 +407,17 @@
 				INFOPLIST_FILE = Memory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Xiomara.Memory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -469,7 +426,6 @@
 		};
 		0AA329C61E33DD7900E03511 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C49B13ADC330C75B6F15364F /* Pods-Memory.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -477,6 +433,17 @@
 				INFOPLIST_FILE = Memory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Xiomara.Memory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
