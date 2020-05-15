@@ -3,12 +3,12 @@
 //  Memory
 
 import Foundation
-import AFNetworking
+import UIKit
 
 typealias CardsArray = [Card]
 
 // MARK: - APIClient
-class APIClient: AFHTTPSessionManager {
+class APIClient {
     
     
     static let shared = APIClient()
